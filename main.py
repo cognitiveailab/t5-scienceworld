@@ -92,7 +92,7 @@ def T5Model(args):
     lm_model = T5ForConditionalGeneration.from_pretrained(args["lm_path"]).eval()
 
     num_layers = len(lm_model.encoder.block)
-    mp_size = args.model_parallelism_size
+    mp_size = args["model_parallelism_size"]
     layers_per_device = ceil(num_layers/mp_size)
     device_map = {i: list(range(i*layers_per_device, min((i+1)*layers_per_device, num_layers))) for i in range(mp_size)}
 
