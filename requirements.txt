@@ -1,0 +1,7 @@
+py4j
+pywebio
+scienceworld
+-f https://download.pytorch.org/whl/torch_stable.html
+torch==1.10.1+cu113
+transformers==4.17.0
+sentencepiece==0.1.96
