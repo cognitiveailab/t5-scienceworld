@@ -199,6 +199,7 @@ def T5Model(args):
 
             if score < 0:
                 done = True
+                score = 0
             print("Obs: " + obs)
 
             #print("Input string: " + str(input_str))
@@ -252,7 +253,7 @@ def parse_args():
     parser.add_argument("--env_step_limit", type=int, default=100)
     parser.add_argument("--lm_path", default="lm_model")
     parser.add_argument("--simplification_str", default="easy")
-    parser.add_argument("--beams", type=int, default=10)
+    parser.add_argument("--beams", type=int, default=16)
     parser.add_argument("--max_episode_per_file", type=int, default=1000)
     parser.add_argument("--mode", default="bc")
     parser.add_argument("--set", default="test")
