@@ -16,7 +16,8 @@ pip install -r requirements.txt
 ```
 You may want to install the pytorch manually if your GPU does not support CUDA 11.
 
-You can download our pretrained T5-11b weights by
+
+To download our pretrained T5 weights, you need to install gsutil first. Go to the [gsutil website](https://cloud.google.com/storage/docs/gsutil_install) for installation instructions. After gsutil is installed, you can download our pretrained T5-11b weights by
 ```bash
 ./download_pretrained_model.sh [mode]
 ```
