@@ -21,7 +21,7 @@ To download our pretrained T5 weights, you need to install gsutil first. Go to t
 ```bash
 ./download_pretrained_model.sh [mode]
 ```
-Replace the \[mode\] with either **bc** or **dt** for Behavior Cloning T5 and Text Decision Transformer T5 model .
+Replace the \[mode\] with either **bc** or **dt** for Behavior Cloning T5 or Text Decision Transformer T5 model respectively.
 
 Run the T5 agent by
 ```bash
