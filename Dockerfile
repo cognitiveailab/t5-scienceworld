@@ -11,11 +11,6 @@ ENV NVIDIA_DRIVER_CAPABILITIES=compute,utility
 
 ENV LIBRARY_PATH=/usr/local/cuda/lib64/stubs
 
-#RUN apt-get update \
-#   &&  apt-get install -y --no-install-recommends libmlx4-1 libmlx5-1 librdmacm1 libibverbs1 libmthca1 libdapl2 dapl2-utils openssh-client openssh-server iproute2 \
-#   &&  apt-get install -y build-essential bzip2=1.0.6-8ubuntu0.2 libbz2-1.0=1.0.6-8ubuntu0.2 systemd git wget cpio libsm6 libxext6 libxrender-dev fuse \
-#   &&  apt-get clean -y \
-#   &&  rm -rf /var/lib/apt/lists/*
 ENV SVDIR=/var/runit
 ENV WORKER_TIMEOUT=300
 
