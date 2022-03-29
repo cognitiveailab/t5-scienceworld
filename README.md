@@ -17,7 +17,11 @@ pip install -r requirements.txt
 You may want to install the pytorch manually if your GPU does not support CUDA 11.
 
 
-To download our pretrained T5 weights, you need to install gsutil first. Go to the [gsutil website](https://cloud.google.com/storage/docs/gsutil_install) for installation instructions. After gsutil is installed, you can download our pretrained T5-11b weights by
+To download our pretrained T5 weights, you need to install gsutil first.
+```bash
+pip install gsutil
+```
+Or, go to the [gsutil website](https://cloud.google.com/storage/docs/gsutil_install) for installation instructions. After gsutil is installed, you can download our pretrained T5-11b weights by
 ```bash
 ./download_pretrained_model.sh [mode]
 ```
@@ -26,10 +30,9 @@ Replace the \[mode\] with either **bc** or **dt** for Behavior Cloning T5 or Tex
 Run the T5 agent by
 ```bash
 mkdir logs
-python main.py --task_num 0 --env_step_limit 100 --lm_path lm_model --simplification_str easy --beams 16 --max_episode_per_file 1000 --mode bc --set test --output_path logs --model_parallelism_size 3
+python main.py --task_num 0 --env_step_limit 100 --lm_path [lm_model] --simplification_str easy --beams 16 --max_episode_per_file 1000 --mode bc --set test --output_path logs --model_parallelism_size 3
 ```
-
-Here:
+Replace the \[lm_path\] with the path to the pretrained T5 model checkpoint. Here is what the rest of the arguments means:
 - **task_num:** The ScienceWorld task index (0-29). *See **task list** below*
 - **env_step_limit:** the number of maximum steps per episode
 - **lm_path:** path to the pretrained T5 model checkpoint
