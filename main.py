@@ -258,7 +258,7 @@ def parse_args():
     parser.add_argument("--mode", default="bc")
     parser.add_argument("--set", default="test")
     parser.add_argument("--output_path", default="")
-    parser.add_argument("--model_parallelism_size", default=3)
+    parser.add_argument("--model_parallelism_size", type=int, default=3)
 
     args = parser.parse_args()
     params = vars(args)
