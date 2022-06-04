@@ -1,6 +1,6 @@
 py4j
 pywebio
-scienceworld
+scienceworld==1.0.0
 -f https://download.pytorch.org/whl/torch_stable.html
 torch==1.10.1+cu113
 transformers==4.17.0
