@@ -195,8 +195,8 @@ def T5Model(args):
             getBestValidAction = findValidAction(predStrs, env, lastNActions)
 
             action = getBestValidAction
-            obs, score, done, info = env.step(action)
-
+            obs, reward, done, info = env.step(action)
+            score = info['score']
             if score < 0:
                 done = True
                 score = 0
