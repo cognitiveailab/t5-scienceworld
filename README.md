@@ -27,6 +27,7 @@ Notice that do not include any other files in the gold path data file folder.
 
 You can format the extracted gold path data to the data we used for T5 training by running
 ```
+mkdir data/[mode]
 data_convert.py data/goldpaths-all [mode]
 ```
 Replace the \[mode\] with either **bc** or **dt** for Behavior Cloning T5 or Text Decision Transformer T5 model respectively.
